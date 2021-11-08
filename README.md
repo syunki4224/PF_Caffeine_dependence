@@ -1,24 +1,38 @@
-# README
+# Caffeine Dependence
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+コーヒーの感想や意見交換を行う交流サイトです。
+自身が飲んだコーヒーに関して、味や値段などの評価を書き込み共有できます。
+また、書き込みに対してはいいねやコメント、登録ユーザー自身に対してのフォロー機能を実装します。
+また、コーヒー豆の名前や原産国に対しての検索機能を実装し
+ユーザー間の交流だけでなく、新しいコーヒーを探す時にも利用できます。
 
-Things you may want to cover:
+### サイトテーマ
+コーヒー
 
-* Ruby version
+### テーマを選んだ理由
+自分が日常の様々なタイミングでコーヒーを飲んでおり
+お気に入りの豆を勧め合ったりする交流の場があればと思いこのテーマにしました。
 
-* System dependencies
+### ターゲットユーザ
+コーヒーを嗜む全ての方が対象です。
 
-* Configuration
+### 主な利用シーン
+新しいコーヒーを探したい時や
+気に入ったコーヒーを他者にオススメしたい時に利用します。
 
-* Database creation
+## 設計書
+余裕があれば作成させて頂きます。
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1eFarswdZKfUdBfgkLSPz5LSutXh9NBYc9aPWZYdZ0Dw/edit#gid=0
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+無し
