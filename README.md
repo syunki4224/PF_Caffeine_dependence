@@ -24,7 +24,21 @@
 自分の好きなコーヒーをオススメする時
 
 ## 設計書
-余裕があれば作成させて頂きます。
+UIFlow
+https://drive.google.com/file/d/1pTyb5f0kJMjuECXD_LTvefjtAckD4Wx3/view?usp=sharing
+
+ER図
+https://drive.google.com/file/d/1FsmdhZ6ICxIniAckzfP0MunTEqS_prDC/view?usp=sharing
+
+ワイヤーフレーム
+https://drive.google.com/file/d/1Ax32gebM98p4XyIH475HWPXJsW-nwo6w/view?usp=sharing
+
+テーブル定義書
+https://docs.google.com/spreadsheets/d/1SbPttogtefXv8xzqgL7wEBpvlb_fIQwmOo0CfgabbYc/edit?usp=sharing
+
+詳細設計
+https://docs.google.com/spreadsheets/d/1c017LRnwhq4bEVmV3mbNHQyKgqICCZ2gHz-TcON9mVc/edit?usp=sharing
+
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1eFarswdZKfUdBfgkLSPz5LSutXh9NBYc9aPWZYdZ0Dw/edit#gid=0
