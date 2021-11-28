@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_051503) do
+ActiveRecord::Schema.define(version: 2021_11_28_084848) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 2021_11_26_051503) do
     t.string "brand"
     t.string "introduction"
     t.string "country"
-    t.string "post_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "post_image_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -58,9 +58,10 @@ ActiveRecord::Schema.define(version: 2021_11_26_051503) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
-    t.string "profile_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "introduction"
+    t.string "profile_image_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
