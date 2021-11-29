@@ -12,7 +12,7 @@
           <th>Introduction</th>
           <th>Follows</th>
           <th>Followers</th>
-          <th>Show</th>
+          <th>Profile</th>
           <th colspan="6"></th>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
               <td><%= user.introduction %></td>
               <td><%= user.followings.count %></td>
               <td><%= user.followers.count %></td>
-              <td><%= link_to "詳細", user_path(user.id) %></td>
+              <td><%= link_to "詳細", user_path(user.id), class: "btn btn-sm btn-primary" %></td>
               <td>
                 <% if current_user != user %>
                   <% if current_user.following?(user) %>

@@ -1,2 +1,2 @@
-<h1>PostComments#destroy</h1>
-<p>Find me in app/views/post_comments/destroy.html.erb</p>
+$(".commentsArea").html("<%= j(render 'posts/comment', { post: @post, post_comment: @post_comment }) %>");
+$(".inputComment").val('');
