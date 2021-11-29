@@ -1,2 +1,46 @@
-<h1>Users#followers</h1>
-<p>Find me in app/views/users/followers.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <% if @users.exists? %>
+        <h2>Followers index</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Introduction</th>
+              <th>Follows</th>
+              <th>Followers</th>
+              <th colspan="5"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg", size: "30x30" %></td>
+                <td><%= link_to user_path(user) do %>
+                  <%= user.name %>
+                  <% end %>
+                </td>
+                <td><%= user.introduction %></td>
+                <td><%= user.followings.count %></td>
+                <td><%= user.followers.count %></td>
+                <td>
+                  <% if current_user != user %>
+                    <% if current_user.following?(user) %>
+                      <th><%= link_to "フォロー解除", user_relationships_path(user.id), method: :delete, class: "btn btn-sm btn-primary rounded" %></th>
+                    <% else %>
+                      <th><%= link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-sm btn-success rounded" %></th>
+                    <% end %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h2>No users are being followed</h2>
+      <% end %>
+    </div>
+  </div>
+</div>

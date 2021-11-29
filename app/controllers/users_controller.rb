@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
-    @users = User.all
+    @users = User.all.order(id: "DESC")
   end
 
   def edit
@@ -30,12 +30,19 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path
   end
 
   def followings
+     user = User.find(params[:id])
+     @users = user.followings
   end
 
   def followers
+    user = User.find(params[:id])
+    @users = user.followers
   end
 
   private
