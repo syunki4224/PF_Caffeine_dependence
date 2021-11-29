@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <% if posts.exists? %>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Brand</th>
+              <th>Introduction</th>
+              <th>Country</th>
+              <th>Comments</th>
+              <th colspan="6"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% posts.each do |post| %>
+              <tr>
+                <td><%= attachment_image_tag(post, :post_image, :fill, 30, 30, fallback: "no_coffee_image.jpg", size: "30x30") %></td>
+                <td><%= link_to post_path(post) do %>
+                  <%= post.brand %>
+                  <% end %>
+                </td>
+                <td><%= post.introduction %></td>
+                <td><%= post.country %></td>
+                <td><i class="far fa-comment">　</i><%= post.post_comments.count %></td>
+                <td class="favorite-btn"><%= render 'favorites/favorite', post: post %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h2>No matching search results</h2>
+      <% end %>
+    </div>
+  </div>
+</div>
