@@ -1,2 +1,14 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h2>お問い合わせフォーム</h2>
+      <%= form_with model: @contact do |f| %>
+        <%= f.label :お名前 %><br>
+        <%= f.text_field :name, size: "30x10" %><br>
+        <%= f.label :お問い合わせ内容 %><br>
+        <%= f.text_area :message, size: "70x5" %><br>
+        <%= f.submit "送信", class: "btn btn-md btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
